@@ -5,7 +5,7 @@
 ### 抄表介绍
 
 ​		以前居民用水使用的水表是以机械表来计量的，因此自来水公司每月收费之前只能派员工去走抄，然后进行开票收费，此种收费方式比较费时费力 且采集到的用水量信息可能出错，随着嵌入式技术的发展，无线远传水表诞生了，此类水表可以将用户的用水量信息通过无线传输技术传递到自来水公司的抄表平台，而我们现在就在做这个平台。
-<img title="机械水表" src="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513135651机械水表.jpg" alt="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513135651%E6%9C%BA%E6%A2%B0%E6%B0%B4%E8%A1%A8.jpg" style="zoom:50%;" /> <img title="抄表流程图" src="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513135700抄表流程图.png" alt="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513135700%E6%8A%84%E8%A1%A8%E6%B5%81%E7%A8%8B%E5%9B%BE.png" style="zoom:62%;" />
+<img title="机械水表" src="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513135651机械水表.jpg" alt="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513135651%E6%9C%BA%E6%A2%B0%E6%B0%B4%E8%A1%A8.jpg" style="width:30%;height:30%;" /> <img title="抄表流程图" src="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513135700抄表流程图.png" alt="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513135700%E6%8A%84%E8%A1%A8%E6%B5%81%E7%A8%8B%E5%9B%BE.png" style="width:45%;height:45%;" />
 
 ​							
 
@@ -19,7 +19,7 @@
 
 ​		三端通信是指`webclient`、`webserver`、`clientserver`之间的通信；一般来讲，其实仅需两端就足以面对大部分场景需要，即`webclient→webserver` 、 `webclient→clientserver` 、 `webserver →clientserver` 。使用三端通信`webclient→webserver→clientserver`目的是在于避免 webclient→clientserver 通信，理论上webclient的所有请求应该由webserver进行管理，而非依赖于请求第三方应用，webserver无法处理的事情可以通过请求其第三方应用获取到信息再给到webclient。这种方式相较于webclient→clientserver 来讲优点是加强了webserver的权利，降低了webclient与第三方应用clientserver的沟通；缺点是多占用了一个端口资源。
 
-<img  title="三端通信流程图" src="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513144227三端通信流程图.png" alt="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513144227%E4%B8%89%E7%AB%AF%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.png" style="zoom:80%;" />
+<img  title="三端通信流程图" src="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513144227三端通信流程图.png" alt="https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200513144227%E4%B8%89%E7%AB%AF%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.png" style="width:40%;height:40%;" />
 
 
 
