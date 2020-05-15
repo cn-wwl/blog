@@ -449,7 +449,7 @@ public class ServerAsynSocket
             }
             var commandmsg = Encoding.GetEncoding("GB2312").GetString(info);
 
-            Console.WriteLine($"{iPEnd}发送消息：" + commandmsg);
+            Console.WriteLine($"【webserver发送消息】：" + commandmsg);
 
             //简单判断了一下是不是web网站服务端的连接发过来的数据
             if (commandmsg.Contains("ConcentratorNo"))
@@ -482,7 +482,7 @@ public class ServerAsynSocket
         if (dic_conn.Keys.Any(s => s.Equals(ipaddress)))
         {
             dic_conn.FirstOrDefault(s => s.Key.Equals(ipaddress)).Value.Socket.Send(send);
-            Console.WriteLine("发送消息为：" + messagestr);
+            Console.WriteLine($"【clinetserver回复】：{ msg }");
         } 
     }  
 }
@@ -621,6 +621,14 @@ public static void Reply()
 最后webserver回复webclient了 就结束了整个通信流程。
 
 
+
+### 效果展示
+
+![https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200515013308%E4%B8%89%E7%AB%AF%E9%80%9A%E4%BF%A1%E6%95%88%E6%9E%9C%E5%9B%BE.gif](https://images.cnblogs.com/cnblogs_com/cn-wwl/1764499/o_200515013308三端通信效果图.gif)
+
+
+
+可以看到在webclient上发送了一条测试数据，此时的发送的数据中并没有`AccumVal`字段，而是在webserver中创建了AccumVal字段， 并且默认值为0.0，然后将该消息发送给了clientserver，clientserver生成好了数据返回给webserver，接着webserver将接收到的数据再回复给webclient。
 
 ### 源码
 
